@@ -1,19 +1,17 @@
-.about {
-  padding: 4vh; }
-  .about h1 {
-    font-family: 'Noto Serif', serif; }
-  .about p {
-    margin: 4vh 0; }
-  .about img {
-    width: 100%; }
+.about p {
+  margin: 4vh 0; }
+
+.about img {
+  width: 100%; }
 
 .offer {
-  background: #283044;
-  padding: 4vh; }
+  background: #3C4F76;
+  color: #FFFFFA; }
   .offer .tiles {
-    width: 100%; }
+    width: 100%;
+    color: black; }
     .offer .tiles .tile {
-      background: #FFFFFA;
+      background: white;
       padding: 4vh;
       margin: 2vh 0;
       vertical-align: middle;
@@ -30,6 +28,53 @@
         height: 30px; }
       .offer .tiles .tile p {
         margin-top: 2vh; }
+
+.prices {
+  background: #f1f1f1; }
+  .prices table, .prices th, .prices td {
+    border: 1px solid #BFC0C0;
+    border-collapse: collapse; }
+  .prices p {
+    margin-top: 20px; }
+    .prices p:first-of-type {
+      margin-bottom: 20px; }
+  .prices table {
+    background: white; }
+    .prices table tr:nth-child(1) {
+      background: #272727;
+      background: linear-gradient(0deg, #272727 0%, #6b6d76 100%); }
+    .prices table tr:nth-child(3) {
+      background: #E8EEF2; }
+    .prices table tr:nth-child(5) {
+      background: #E8EEF2; }
+    .prices table tr:nth-child(7) {
+      background: #E8EEF2; }
+    .prices table tr th {
+      padding: 10px 0;
+      color: #FFFFFA;
+      font-weight: 500; }
+    .prices table tr td {
+      padding: 10px 20px; }
+
+.contact p {
+  margin-bottom: 20px; }
+
+.contact div {
+  vertical-align: middle;
+  margin: 20px 0; }
+  .contact div img {
+    height: 1.2em;
+    vertical-align: middle; }
+  .contact div p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-bottom: 0; }
+
+footer {
+  background: #515052;
+  color: #FFFFFA;
+  text-align: center; }
 
 .menu {
   display: block;
@@ -129,3 +174,11 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Noto Sans', sans-serif; }
+
+.about, .offer, .prices, .portfolio, .contact, footer {
+  padding: 20px; }
+
+h1 {
+  margin-bottom: 20px;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.2em; }

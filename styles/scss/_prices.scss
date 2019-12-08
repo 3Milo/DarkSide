@@ -1,0 +1,39 @@
+.prices {
+	background: #f1f1f1;
+	table, th, td {
+		border: 1px solid $silver;
+		border-collapse: collapse;
+	}
+	p {
+		&:first-of-type {
+			margin-bottom: 20px;
+		}
+		margin-top: 20px;
+	}
+	table {
+		background: white;
+		tr {
+			&:nth-child(1) {
+				background: rgb(39,39,39);
+				background: linear-gradient(0deg, rgba(39,39,39,1) 0%, rgba(107,109,118,1) 100%);
+			}
+			&:nth-child(3) {
+				background: $glitter;
+			}
+			&:nth-child(5) {
+				background: $glitter;
+			}
+			&:nth-child(7) {
+				background: $glitter;
+			}
+			th {
+				padding: 10px 0;
+				color: $white;
+				font-weight: 500;
+			}
+			td {
+				padding: 10px 20px;
+			}
+		}
+	}
+}

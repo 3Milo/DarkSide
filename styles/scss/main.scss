@@ -2,6 +2,10 @@
 
 @import 'about';
 @import 'offer';
+@import 'prices';
+@import 'portfolio';
+@import 'contact';
+@import 'footer';
 
 @import 'menu';
 @import 'burger';
@@ -19,4 +23,14 @@
 html {
 	scroll-behavior: smooth;
 	font-family: 'Noto Sans', sans-serif;
+}
+
+.about, .offer, .prices, .portfolio, .contact, footer {
+	padding: 20px;
+}
+
+h1 {
+	margin-bottom: 20px;
+	font-family: 'Noto Serif', serif;
+	font-size: 1.2em;
 }
