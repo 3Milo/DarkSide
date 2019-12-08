@@ -1,0 +1,29 @@
+.offer {
+	background: $darkblue;
+	padding: 4vh;
+	.tiles {
+		width: 100%;
+		.tile {
+			background: $white;
+			padding: 4vh;
+			margin: 2vh 0;
+			vertical-align: middle;
+			box-shadow: 0 3px 16px rgba(0,0,0,.1);
+			h5 {
+				font-family: 'Noto Serif', serif;
+				display: inline-block;
+				vertical-align: middle;
+				padding-left: 4vh;
+			}
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				width: 30px;
+				height: 30px;
+			}
+			p {
+				margin-top: 2vh;
+			}
+		}
+	}
+}

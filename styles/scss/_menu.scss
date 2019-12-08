@@ -1,0 +1,29 @@
+.menu {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100vh;
+	background: $grey;
+	overflow: hidden;
+	transition: width 0.4s ease;
+	.flexbox {
+		display: flex;
+		flex-direction: column;
+		vertical-align: center;
+		justify-content: space-between;
+		margin: 10vh;
+		height: 80vh;
+		div {
+			font-family: 'Noto Sans', sans-serif;
+			padding: 16px 0;
+			border-bottom: 2px solid $green;
+			width: 50vw;
+			color: $white;
+		}
+	}
+	&.open {
+		width: 100vw;
+	}
+}

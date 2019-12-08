@@ -1,0 +1,14 @@
+{
+  "name": "maciej",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "scss": "node-sass -watch styles/scss -o styles"
+  },
+  "author": "Emil Konikiewicz",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+  }
+}
