@@ -6,21 +6,26 @@
 		color: black;
 		.tile {
 			background: white;
-			padding: 4vh;
-			margin: 2vh 0;
+			padding: 30px;
+			margin: 20px 0;
 			vertical-align: middle;
 			box-shadow: 0 3px 16px rgba(0,0,0,.1);
+			&:first-of-type {
+				margin: 0 0 20px 0;
+			}
 			h5 {
 				font-family: 'Noto Serif', serif;
 				display: inline-block;
 				vertical-align: middle;
-				padding-left: 4vh;
+				padding-left: 20px;
+				font-size: 1.2em;
+				font-weight: 600;
 			}
 			img {
 				display: inline-block;
 				vertical-align: middle;
-				width: 30px;
-				height: 30px;
+				width: 40px;
+				height: 40px;
 			}
 			p {
 				margin-top: 2vh;
