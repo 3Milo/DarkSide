@@ -6,3 +6,15 @@
 		width: 100%;
 	}
 }
+
+@media only screen and (min-width: 700px) {
+	.about {
+		p {
+			width: 50%;
+			display: inline-block;
+		}
+		img {
+			width: calc(50% - 5px);
+		}
+	}
+}

@@ -2,4 +2,11 @@ footer {
 	background: $grey;
 	color: $green;
 	text-align: center;
+	p {
+		pointer-events: none;
+		a {
+			text-decoration:none;
+			color:inherit; 
+		}
+	}
 }

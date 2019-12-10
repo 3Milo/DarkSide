@@ -4,6 +4,13 @@
 .about img {
   width: 100%; }
 
+@media only screen and (min-width: 700px) {
+  .about p {
+    width: 50%;
+    display: inline-block; }
+  .about img {
+    width: calc(50% - 5px); } }
+
 .offer {
   background: #3C4F76;
   color: #FFFFFA; }
@@ -79,6 +86,11 @@ footer {
   background: #515052;
   color: #b9d432;
   text-align: center; }
+  footer p {
+    pointer-events: none; }
+    footer p a {
+      text-decoration: none;
+      color: inherit; }
 
 .menu {
   display: block;
