@@ -1,20 +1,25 @@
 .about {
-	p {
-		margin: 4vh 0;
-	}
-	img {
-		width: 100%;
+	div {
+		p {
+			margin: 20px 0;
+		}
+		img {
+			width: 100%;
+		}
 	}
 }
 
 @media only screen and (min-width: 700px) {
 	.about {
-		p {
-			width: 50%;
+		vertical-align: text-top;
+		div {
 			display: inline-block;
-		}
-		img {
-			width: calc(50% - 5px);
+			width: 300px;
+			vertical-align: text-top;
+			&:nth-child(1) {
+				width: calc(100% - 346px);
+				margin-right: 40px;
+			}
 		}
 	}
 }

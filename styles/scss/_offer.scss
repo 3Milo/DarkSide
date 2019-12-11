@@ -1,34 +1,55 @@
 .offer {
 	background: $darkblue;
 	color: $white;
-	.tiles {
+	.tilesContainer {
 		width: 100%;
 		color: black;
-		.tile {
-			background: white;
-			padding: 30px;
-			margin: 20px 0;
-			vertical-align: middle;
-			box-shadow: 0 3px 16px rgba(0,0,0,.1);
-			&:first-of-type {
+		.tilesRow {
+			.tile {
+				background: white;
+				padding: 30px;
 				margin: 0 0 20px 0;
-			}
-			h5 {
-				font-family: 'Noto Serif', serif;
-				display: inline-block;
 				vertical-align: middle;
-				padding-left: 20px;
-				font-size: 1.2em;
-				font-weight: 600;
+				box-shadow: 0 3px 16px rgba(0,0,0,.1);
+				h5 {
+					font-family: 'Noto Serif', serif;
+					display: inline-block;
+					vertical-align: middle;
+					padding-left: 20px;
+					font-size: 1.2em;
+					font-weight: 600;
+				}
+				img {
+					display: inline-block;
+					vertical-align: middle;
+					width: 40px;
+					height: 40px;
+				}
+				p {
+					margin-top: 20px;
+				}
 			}
-			img {
-				display: inline-block;
-				vertical-align: middle;
-				width: 40px;
-				height: 40px;
-			}
-			p {
-				margin-top: 2vh;
+		}
+	}
+}
+
+@media only screen and (min-width: 700px) {
+    .offer {
+		.tilesContainer {
+			margin-bottom: 20px;
+			.tilesRow {
+				.tile {
+					box-sizing: border-box;
+					display: inline-block;
+					width: calc(50% - 13px);
+					margin: 0;
+					&:nth-child(1) {
+						margin-right: 20px;
+					}
+				}
+				&:nth-child(1) {
+					margin-bottom: 23px;
+				}
 			}
 		}
 	}

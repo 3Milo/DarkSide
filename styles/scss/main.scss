@@ -32,5 +32,11 @@ html {
 h1 {
 	margin-bottom: 20px;
 	font-family: 'Noto Serif', serif;
-	font-size: 1.2em;
+	font-size: 1.4em;
+}
+
+@media only screen and (min-width: 700px) {
+    .about, .offer, .prices, .portfolio, .contact, footer {
+        padding: 50px 20%;
+    }
 }

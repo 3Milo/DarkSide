@@ -1,69 +1,80 @@
-.about p {
-  margin: 4vh 0; }
+.about div p {
+  margin: 20px 0; }
 
-.about img {
+.about div img {
   width: 100%; }
 
 @media only screen and (min-width: 700px) {
-  .about p {
-    width: 50%;
-    display: inline-block; }
-  .about img {
-    width: calc(50% - 5px); } }
+  .about {
+    vertical-align: text-top; }
+    .about div {
+      display: inline-block;
+      width: 300px;
+      vertical-align: text-top; }
+      .about div:nth-child(1) {
+        width: calc(100% - 346px);
+        margin-right: 40px; } }
 
 .offer {
   background: #3C4F76;
   color: #FFFFFA; }
-  .offer .tiles {
+  .offer .tilesContainer {
     width: 100%;
     color: black; }
-    .offer .tiles .tile {
+    .offer .tilesContainer .tilesRow .tile {
       background: white;
       padding: 30px;
-      margin: 20px 0;
+      margin: 0 0 20px 0;
       vertical-align: middle;
       box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
-      .offer .tiles .tile:first-of-type {
-        margin: 0 0 20px 0; }
-      .offer .tiles .tile h5 {
+      .offer .tilesContainer .tilesRow .tile h5 {
         font-family: 'Noto Serif', serif;
         display: inline-block;
         vertical-align: middle;
         padding-left: 20px;
         font-size: 1.2em;
         font-weight: 600; }
-      .offer .tiles .tile img {
+      .offer .tilesContainer .tilesRow .tile img {
         display: inline-block;
         vertical-align: middle;
         width: 40px;
         height: 40px; }
-      .offer .tiles .tile p {
-        margin-top: 2vh; }
+      .offer .tilesContainer .tilesRow .tile p {
+        margin-top: 20px; }
+
+@media only screen and (min-width: 700px) {
+  .offer .tilesContainer {
+    margin-bottom: 20px; }
+    .offer .tilesContainer .tilesRow .tile {
+      box-sizing: border-box;
+      display: inline-block;
+      width: calc(50% - 13px);
+      margin: 0; }
+      .offer .tilesContainer .tilesRow .tile:nth-child(1) {
+        margin-right: 20px; }
+    .offer .tilesContainer .tilesRow:nth-child(1) {
+      margin-bottom: 23px; } }
 
 .prices {
-  background: #f1f1f1; }
+  background: #f5f6f8; }
   .prices table, .prices th, .prices td {
-    border: 1px solid #BFC0C0;
+    border: 1px solid #d3d5d8;
     border-collapse: collapse; }
   .prices p {
     margin-top: 20px; }
     .prices p:first-of-type {
       margin-bottom: 20px; }
   .prices table {
-    background: white; }
+    background: white;
+    color: black;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
     .prices table tr:nth-child(1) {
-      background: #272727;
-      background: linear-gradient(0deg, #272727 0%, #6b6d76 100%); }
-    .prices table tr:nth-child(3) {
-      background: #E8EEF2; }
-    .prices table tr:nth-child(5) {
-      background: #E8EEF2; }
-    .prices table tr:nth-child(7) {
-      background: #E8EEF2; }
+      background: #3C4F76; }
     .prices table tr th {
       padding: 10px 0;
       color: #FFFFFA;
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 1.1em; }
     .prices table tr td {
       padding: 10px 20px; }
 
@@ -83,7 +94,7 @@
     margin-bottom: 0; }
 
 footer {
-  background: #515052;
+  background: linear-gradient(180deg, #696969 0%, #515052 100%);
   color: #b9d432;
   text-align: center; }
   footer p {
@@ -201,4 +212,8 @@ html {
 h1 {
   margin-bottom: 20px;
   font-family: 'Noto Serif', serif;
-  font-size: 1.2em; }
+  font-size: 1.4em; }
+
+@media only screen and (min-width: 700px) {
+  .about, .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px 20%; } }
