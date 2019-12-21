@@ -1,7 +1,14 @@
 .prices {
-	background: #f5f6f8;
+	// background: $glitter;
+	background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url("../images/background.jpg");
+	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	color: white;
 	table, th, td {
-		border: 1px solid #d3d5d8;
+		// border: 1px solid #d3d5d8;
+		border: 1px solid rgba(160, 160, 160, .3);
 		border-collapse: collapse;
 	}
 	p {
@@ -11,21 +18,26 @@
 		margin-top: 20px;
 	}
 	table {
-		background: white;
+		background: rgba(230, 230, 230, .9);
 		color: black;
+		// color: white;
+		// opacity: .5;
 		box-shadow: 0 3px 16px rgba(0,0,0,.1);
 		tr {
 			&:nth-child(1) {
-				background: $darkblue;
+				// background: $darkblue;
+				// background: black;
+				// background: red;
 			}
 			th {
-				padding: 10px 0;
-				color: $white;
+				padding: 20px 0;
+				// color: $white;
+
 				font-weight: 500;
-				font-size: 1.1em;
+				font-size: 1.2em;
 			}
 			td {
-				padding: 10px 20px;
+				padding: 20px 20px;
 			}
 		}
 	}

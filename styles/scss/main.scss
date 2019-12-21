@@ -9,6 +9,7 @@
 
 @import 'menu';
 @import 'burger';
+@import 'navbar';
 
 * {
     margin: 0;
@@ -22,7 +23,8 @@
 
 html {
 	scroll-behavior: smooth;
-	font-family: 'Noto Sans', sans-serif;
+	// font-family: 'Noto Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .about, .offer, .prices, .portfolio, .contact, footer {
@@ -31,12 +33,17 @@ html {
 
 h1 {
 	margin-bottom: 20px;
-	font-family: 'Noto Serif', serif;
+	// font-family: 'Noto Serif', serif;
+    font-family: 'Montserrat', sans-serif;
 	font-size: 1.4em;
 }
 
 @media only screen and (min-width: 700px) {
-    .about, .offer, .prices, .portfolio, .contact, footer {
+    .about, .offer, .prices, .portfolio, .contact{
         padding: 50px 20%;
+    }
+    footer {
+        padding: 50px 20%;
+        line-height: 1.6em;
     }
 }

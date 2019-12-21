@@ -1,12 +1,12 @@
 .menu {
 	display: block;
-	// position: fixed;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 0;
 	height: 100vh;
-	background: $grey;
+	// background: $grey;
+	background: $darkblue;
 	overflow: hidden;
 	transition: width 0.4s ease;
 	.flexbox {

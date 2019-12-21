@@ -16,7 +16,7 @@
         margin-right: 40px; } }
 
 .offer {
-  background: #3C4F76;
+  background: #2B4162;
   color: #FFFFFA; }
   .offer .tilesContainer {
     width: 100%;
@@ -28,7 +28,7 @@
       vertical-align: middle;
       box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
       .offer .tilesContainer .tilesRow .tile h5 {
-        font-family: 'Noto Serif', serif;
+        font-family: 'Montserrat', sans-serif;
         display: inline-block;
         vertical-align: middle;
         padding-left: 20px;
@@ -56,27 +56,29 @@
       margin-bottom: 23px; } }
 
 .prices {
-  background: #f5f6f8; }
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white; }
   .prices table, .prices th, .prices td {
-    border: 1px solid #d3d5d8;
+    border: 1px solid rgba(160, 160, 160, 0.3);
     border-collapse: collapse; }
   .prices p {
     margin-top: 20px; }
     .prices p:first-of-type {
       margin-bottom: 20px; }
   .prices table {
-    background: white;
+    background: rgba(230, 230, 230, 0.9);
     color: black;
     box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
-    .prices table tr:nth-child(1) {
-      background: #3C4F76; }
     .prices table tr th {
-      padding: 10px 0;
-      color: #FFFFFA;
+      padding: 20px 0;
       font-weight: 500;
-      font-size: 1.1em; }
+      font-size: 1.2em; }
     .prices table tr td {
-      padding: 10px 20px; }
+      padding: 20px 20px; }
 
 .contact p {
   margin-bottom: 20px; }
@@ -94,8 +96,8 @@
     margin-bottom: 0; }
 
 footer {
-  background: linear-gradient(180deg, #696969 0%, #515052 100%);
-  color: #b9d432;
+  background: #515052;
+  color: #FFFFFA;
   text-align: center; }
   footer p {
     pointer-events: none; }
@@ -110,7 +112,7 @@ footer {
   left: 0;
   width: 0;
   height: 100vh;
-  background: #515052;
+  background: #2B4162;
   overflow: hidden;
   transition: width 0.4s ease; }
   .menu .flexbox {
@@ -193,6 +195,40 @@ footer {
     width: 0%;
     left: 50%; }
 
+@media only screen and (min-width: 1000px) {
+  .burger {
+    display: none; } }
+
+.navbar {
+  display: none; }
+
+@media only screen and (min-width: 1000px) {
+  .navbar {
+    display: block;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px 0px; }
+    .navbar div {
+      vertical-align: middle;
+      display: inline-block;
+      text-align: right; }
+    .navbar .name {
+      font-size: 1.6em;
+      vertical-align: middle;
+      width: 330px; }
+    .navbar .options {
+      vertical-align: middle;
+      width: calc(100% - 335px); }
+      .navbar .options div {
+        display: inline;
+        box-sizing: border-box;
+        padding: 15px 20px;
+        box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+        margin-right: 40px;
+        cursor: pointer; }
+        .navbar .options div:hover {
+          background: #b9d432;
+          color: white; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -204,16 +240,19 @@ footer {
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Noto Sans', sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 .about, .offer, .prices, .portfolio, .contact, footer {
   padding: 20px; }
 
 h1 {
   margin-bottom: 20px;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4em; }
 
 @media only screen and (min-width: 700px) {
-  .about, .offer, .prices, .portfolio, .contact, footer {
-    padding: 50px 20%; } }
+  .about, .offer, .prices, .portfolio, .contact {
+    padding: 50px 20%; }
+  footer {
+    padding: 50px 20%;
+    line-height: 1.6em; } }

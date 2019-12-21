@@ -1,5 +1,6 @@
 .offer {
 	background: $darkblue;
+	// background: #6B0504;
 	color: $white;
 	.tilesContainer {
 		width: 100%;
@@ -12,7 +13,8 @@
 				vertical-align: middle;
 				box-shadow: 0 3px 16px rgba(0,0,0,.1);
 				h5 {
-					font-family: 'Noto Serif', serif;
+					// font-family: 'Noto Serif', serif;
+					font-family: 'Montserrat', sans-serif;
 					display: inline-block;
 					vertical-align: middle;
 					padding-left: 20px;

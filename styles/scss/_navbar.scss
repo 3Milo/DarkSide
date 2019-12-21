@@ -1,0 +1,41 @@
+.navbar {
+	display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    .navbar {
+    	display: block;
+		box-shadow: 0 3px 16px rgba(0,0,0,.1);
+		padding: 20px 0px;
+		div {
+			vertical-align: middle;
+			display: inline-block;
+			text-align: right;
+		}
+		.name {
+			font-size: 1.6em;
+			vertical-align: middle;
+			width: 330px;
+		}
+		.options {
+			vertical-align: middle;
+			width: calc(100% - 335px);
+			// font-size: 1.2em;
+			div {
+				display: inline;
+				box-sizing: border-box;
+				padding: 15px 20px;
+				box-shadow: 0 3px 16px rgba(0,0,0,.1);
+				// background: $green;
+				margin-right: 40px;
+				cursor: pointer;
+				&:hover {
+					// border: 2px solid $green;
+					background: $green;
+					color: white;
+					// border-radius: 8px;
+				}
+			}
+		}
+	}
+}
