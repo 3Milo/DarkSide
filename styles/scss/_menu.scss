@@ -5,7 +5,6 @@
 	left: 0;
 	width: 0;
 	height: 100vh;
-	// background: $grey;
 	background: $darkblue;
 	overflow: hidden;
 	transition: width 0.4s ease;
@@ -17,11 +16,12 @@
 		margin: 10vh;
 		height: 80vh;
 		div {
-			font-family: 'Noto Sans', sans-serif;
 			padding: 16px 0;
-			border-bottom: 2px solid $green;
-			width: 50vw;
-			color: $white;
+			width: calc(100vw - 20vh);
+			color: $green;
+			letter-spacing: 3px;
+			font-size: 1.2em;
+			text-align: center;
 		}
 	}
 	&.open {

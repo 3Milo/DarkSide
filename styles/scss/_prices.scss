@@ -1,43 +1,38 @@
 .prices {
-	// background: $glitter;
-	background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url("../images/background.jpg");
-	background-repeat: no-repeat;
- 	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-	color: white;
+	// background: #BFD7EA;
+	// background: #C33C54;
+	// background: #524632;
+	// background: #815E5B;
+	background: #F7FFF7;
+	// color: $white;
 	table, th, td {
-		// border: 1px solid #d3d5d8;
 		border: 1px solid rgba(160, 160, 160, .3);
 		border-collapse: collapse;
 	}
+	table {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
 	p {
+		margin-top: 40px;
 		&:first-of-type {
-			margin-bottom: 20px;
+			margin-top: 0;
 		}
-		margin-top: 20px;
 	}
 	table {
-		background: rgba(230, 230, 230, .9);
+		background: $white;
 		color: black;
-		// color: white;
-		// opacity: .5;
 		box-shadow: 0 3px 16px rgba(0,0,0,.1);
 		tr {
-			&:nth-child(1) {
-				// background: $darkblue;
-				// background: black;
-				// background: red;
-			}
 			th {
-				padding: 20px 0;
-				// color: $white;
-
+				padding: 20px 5px;
 				font-weight: 500;
-				font-size: 1.2em;
+				font-size: 1.3em;
+				letter-spacing: 1px;
 			}
 			td {
 				padding: 20px 20px;
+				letter-spacing: 1px;
 			}
 		}
 	}

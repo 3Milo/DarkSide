@@ -16,8 +16,8 @@
         margin-right: 40px; } }
 
 .offer {
-  background: #2B4162;
-  color: #FFFFFA; }
+  background: #0B3954;
+  color: #FFFFFE; }
   .offer .tilesContainer {
     width: 100%;
     color: black; }
@@ -33,7 +33,9 @@
         vertical-align: middle;
         padding-left: 20px;
         font-size: 1.2em;
-        font-weight: 600; }
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
       .offer .tilesContainer .tilesRow .tile img {
         display: inline-block;
         vertical-align: middle;
@@ -56,29 +58,29 @@
       margin-bottom: 23px; } }
 
 .prices {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  color: white; }
+  background: #F7FFF7; }
   .prices table, .prices th, .prices td {
     border: 1px solid rgba(160, 160, 160, 0.3);
     border-collapse: collapse; }
-  .prices p {
-    margin-top: 20px; }
-    .prices p:first-of-type {
-      margin-bottom: 20px; }
   .prices table {
-    background: rgba(230, 230, 230, 0.9);
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  .prices p {
+    margin-top: 40px; }
+    .prices p:first-of-type {
+      margin-top: 0; }
+  .prices table {
+    background: #FFFFFE;
     color: black;
     box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
     .prices table tr th {
-      padding: 20px 0;
+      padding: 20px 5px;
       font-weight: 500;
-      font-size: 1.2em; }
+      font-size: 1.3em;
+      letter-spacing: 1px; }
     .prices table tr td {
-      padding: 20px 20px; }
+      padding: 20px 20px;
+      letter-spacing: 1px; }
 
 .contact p {
   margin-bottom: 20px; }
@@ -93,11 +95,12 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 5px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 1.3em; }
 
 footer {
-  background: #515052;
-  color: #FFFFFA;
+  background: #0B3954;
+  color: #FFFFFE;
   text-align: center; }
   footer p {
     pointer-events: none; }
@@ -123,11 +126,12 @@ footer {
     margin: 10vh;
     height: 80vh; }
     .menu .flexbox div {
-      font-family: 'Noto Sans', sans-serif;
       padding: 16px 0;
-      border-bottom: 2px solid #b9d432;
-      width: 50vw;
-      color: #FFFFFA; }
+      width: calc(100vw - 20vh);
+      color: #b9d432;
+      letter-spacing: 3px;
+      font-size: 1.2em;
+      text-align: center; }
   .menu.open {
     width: 100vw; }
 
@@ -206,28 +210,27 @@ footer {
   .navbar {
     display: block;
     box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
-    padding: 20px 0px; }
+    padding: 50px 0px; }
     .navbar div {
       vertical-align: middle;
       display: inline-block;
-      text-align: right; }
+      text-align: right;
+      vertical-align: middle; }
     .navbar .name {
       font-size: 1.6em;
-      vertical-align: middle;
-      width: 330px; }
+      width: 400px; }
     .navbar .options {
-      vertical-align: middle;
-      width: calc(100% - 335px); }
+      width: calc(100% - 405px); }
       .navbar .options div {
         display: inline;
+        letter-spacing: 1px;
         box-sizing: border-box;
-        padding: 15px 20px;
-        box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+        padding: 5px 2px;
         margin-right: 40px;
-        cursor: pointer; }
+        cursor: pointer;
+        border-bottom: 1px solid white; }
         .navbar .options div:hover {
-          background: #b9d432;
-          color: white; } }
+          border-bottom: 2px solid #b9d432; } }
 
 * {
   margin: 0;
@@ -247,8 +250,13 @@ html {
 
 h1 {
   margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+
+p {
+  line-height: 26px;
+  letter-spacing: 1px; }
 
 @media only screen and (min-width: 700px) {
   .about, .offer, .prices, .portfolio, .contact {

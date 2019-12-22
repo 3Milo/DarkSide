@@ -23,7 +23,6 @@
 
 html {
 	scroll-behavior: smooth;
-	// font-family: 'Noto Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -33,9 +32,16 @@ html {
 
 h1 {
 	margin-bottom: 20px;
-	// font-family: 'Noto Serif', serif;
-    font-family: 'Montserrat', sans-serif;
 	font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    // border-left: 10px solid $green;
+    // padding-left: 10px;
+}
+
+p {
+    line-height: 26px;
+    letter-spacing: 1px;
 }
 
 @media only screen and (min-width: 700px) {
