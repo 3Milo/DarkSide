@@ -1,14 +1,28 @@
 footer {
-	// background: #1C2321;
-	// background: #d1d1d1;
 	background: #0B3954;
 	color: $white;
 	text-align: center;
 	p {
 		pointer-events: none;
+		line-height: 2em;
 		a {
 			text-decoration:none;
 			color:inherit; 
+		}
+	}
+}
+@media only screen and (min-width: 350px) {
+    footer {
+		p {
+			max-width: 300px;
+			margin: 0 auto;
+		}
+	}
+}
+@media only screen and (min-width: 440px) {
+    footer {
+		p {
+			max-width: 440px;
 		}
 	}
 }

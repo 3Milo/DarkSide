@@ -1,14 +1,5 @@
 .contact {
-	// background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url("../images/background.jpg");
-	// background-repeat: no-repeat;
- // 	background-attachment: fixed;
-	// background-position: center;
-	// background-size: cover;
-	// color: white;
-	p {
-		margin-bottom: 20px;
-	}
-	div {
+	.phone, .mail {
 		vertical-align: middle;
 		margin: 20px 0;
 		img {
@@ -20,7 +11,9 @@
 			vertical-align: middle;
 			margin-left: 5px;
 			margin-bottom: 0;
-			font-size: 1.3em;
 		}
+	}
+	.mail {
+		margin: 20px 0 0 0;
 	}
 }

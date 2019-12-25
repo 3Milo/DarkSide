@@ -4,58 +4,66 @@
 .about div img {
   width: 100%; }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   .about {
-    vertical-align: text-top; }
-    .about div {
-      display: inline-block;
-      width: 300px;
-      vertical-align: text-top; }
-      .about div:nth-child(1) {
-        width: calc(100% - 346px);
-        margin-right: 40px; } }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .about .text {
+      flex: 1;
+      margin-right: 50px; }
+    .about .img {
+      width: 350px; } }
 
 .offer {
-  background: #0B3954;
-  color: #FFFFFE; }
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFE;
+  background: #0B3954; }
   .offer .tilesContainer {
-    width: 100%;
     color: black; }
-    .offer .tilesContainer .tilesRow .tile {
-      background: white;
-      padding: 30px;
-      margin: 0 0 20px 0;
-      vertical-align: middle;
-      box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
-      .offer .tilesContainer .tilesRow .tile h5 {
-        font-family: 'Montserrat', sans-serif;
-        display: inline-block;
-        vertical-align: middle;
-        padding-left: 20px;
-        font-size: 1.2em;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px; }
-      .offer .tilesContainer .tilesRow .tile img {
-        display: inline-block;
-        vertical-align: middle;
-        width: 40px;
-        height: 40px; }
-      .offer .tilesContainer .tilesRow .tile p {
-        margin-top: 20px; }
+    .offer .tilesContainer .firstRow, .offer .tilesContainer .secondRow {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .offer .tilesContainer .firstRow .tile, .offer .tilesContainer .secondRow .tile {
+        background: white;
+        padding: 30px;
+        margin: 0 0 20px 0;
+        box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
+        .offer .tilesContainer .firstRow .tile .name, .offer .tilesContainer .secondRow .tile .name {
+          display: flex;
+          flex-direction: row;
+          align-items: center; }
+          .offer .tilesContainer .firstRow .tile .name h5, .offer .tilesContainer .secondRow .tile .name h5 {
+            font-size: 1.2em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px; }
+          .offer .tilesContainer .firstRow .tile .name img, .offer .tilesContainer .secondRow .tile .name img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px; }
 
-@media only screen and (min-width: 700px) {
-  .offer .tilesContainer {
-    margin-bottom: 20px; }
-    .offer .tilesContainer .tilesRow .tile {
-      box-sizing: border-box;
-      display: inline-block;
-      width: calc(50% - 13px);
+@media only screen and (min-width: 800px) {
+  .offer .tilesContainer .firstRow, .offer .tilesContainer .secondRow {
+    flex-direction: row; }
+    .offer .tilesContainer .firstRow .tile, .offer .tilesContainer .secondRow .tile {
+      width: calc(50% - 70px);
       margin: 0; }
-      .offer .tilesContainer .tilesRow .tile:nth-child(1) {
-        margin-right: 20px; }
-    .offer .tilesContainer .tilesRow:nth-child(1) {
-      margin-bottom: 23px; } }
+  .offer .tilesContainer .firstRow, .offer .tilesContainer .secondRow {
+    margin: 0 0 20px 0; }
+  .offer .text {
+    flex: 1; } }
+
+@media only screen and (min-width: 1300px) {
+  .offer .tilesContainer .firstRow .tile, .offer .tilesContainer .secondRow .tile {
+    width: calc(50% - 80px);
+    margin: 0; }
+  .offer .tilesContainer .firstRow, .offer .tilesContainer .secondRow {
+    margin: 0 0 40px 0; }
+  .offer .text {
+    flex: 1; } }
 
 .prices {
   background: #F7FFF7; }
@@ -75,38 +83,46 @@
     box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); }
     .prices table tr th {
       padding: 20px 5px;
-      font-weight: 500;
-      font-size: 1.3em;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      text-transform: uppercase; }
     .prices table tr td {
       padding: 20px 20px;
       letter-spacing: 1px; }
 
-.contact p {
-  margin-bottom: 20px; }
-
-.contact div {
+.contact .phone, .contact .mail {
   vertical-align: middle;
   margin: 20px 0; }
-  .contact div img {
+  .contact .phone img, .contact .mail img {
     height: 1.2em;
     vertical-align: middle; }
-  .contact div p {
+  .contact .phone p, .contact .mail p {
     display: inline-block;
     vertical-align: middle;
     margin-left: 5px;
-    margin-bottom: 0;
-    font-size: 1.3em; }
+    margin-bottom: 0; }
+
+.contact .mail {
+  margin: 20px 0 0 0; }
 
 footer {
   background: #0B3954;
   color: #FFFFFE;
   text-align: center; }
   footer p {
-    pointer-events: none; }
+    pointer-events: none;
+    line-height: 2em; }
     footer p a {
       text-decoration: none;
       color: inherit; }
+
+@media only screen and (min-width: 350px) {
+  footer p {
+    max-width: 300px;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 440px) {
+  footer p {
+    max-width: 440px; } }
 
 .menu {
   display: block;
@@ -115,7 +131,7 @@ footer {
   left: 0;
   width: 0;
   height: 100vh;
-  background: #2B4162;
+  background: #0B3954;
   overflow: hidden;
   transition: width 0.4s ease; }
   .menu .flexbox {
@@ -208,29 +224,41 @@ footer {
 
 @media only screen and (min-width: 1000px) {
   .navbar {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
     box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
-    padding: 50px 0px; }
-    .navbar div {
-      vertical-align: middle;
-      display: inline-block;
-      text-align: right;
-      vertical-align: middle; }
+    letter-spacing: 1px; }
     .navbar .name {
       font-size: 1.6em;
-      width: 400px; }
+      width: 329px;
+      border-bottom: 2px solid white; }
     .navbar .options {
-      width: calc(100% - 405px); }
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
       .navbar .options div {
-        display: inline;
-        letter-spacing: 1px;
-        box-sizing: border-box;
-        padding: 5px 2px;
-        margin-right: 40px;
         cursor: pointer;
-        border-bottom: 1px solid white; }
+        border-bottom: 2px solid white;
+        margin-right: 20px; }
+        .navbar .options div:nth-child(5) {
+          margin-right: 0; }
         .navbar .options div:hover {
           border-bottom: 2px solid #b9d432; } }
+
+@media only screen and (min-width: 1280px) {
+  .navbar {
+    padding: 30px 60px; }
+    .navbar .options div {
+      margin-right: 40px; } }
+
+@media only screen and (min-width: 1600px) {
+  .navbar {
+    padding: 30px 100px; }
+    .navbar .options div {
+      margin-right: 45px; } }
 
 * {
   margin: 0;
@@ -258,9 +286,22 @@ p {
   line-height: 26px;
   letter-spacing: 1px; }
 
-@media only screen and (min-width: 700px) {
-  .about, .offer, .prices, .portfolio, .contact {
-    padding: 50px 20%; }
-  footer {
-    padding: 50px 20%;
-    line-height: 1.6em; } }
+@media only screen and (min-width: 900px) {
+  .about, .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px; } }
+
+@media only screen and (min-width: 1280px) {
+  .about, .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px 200px; } }
+
+@media only screen and (min-width: 1500px) {
+  .about, .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px 250px; } }
+
+@media only screen and (min-width: 1600px) {
+  .about, .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px 300px; } }
+
+@media only screen and (min-width: 1900px) {
+  .about, .offer, .prices, .portfolio, .contact, footer {
+    padding: 70px 400px; } }

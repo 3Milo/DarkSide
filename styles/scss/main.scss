@@ -35,8 +35,6 @@ h1 {
 	font-size: 1.4em;
     text-transform: uppercase;
     letter-spacing: 3px;
-    // border-left: 10px solid $green;
-    // padding-left: 10px;
 }
 
 p {
@@ -44,12 +42,28 @@ p {
     letter-spacing: 1px;
 }
 
-@media only screen and (min-width: 700px) {
-    .about, .offer, .prices, .portfolio, .contact{
-        padding: 50px 20%;
+@media only screen and (min-width: 900px) {
+    .about, .offer, .prices, .portfolio, .contact, footer {
+        padding: 50px;
     }
-    footer {
-        padding: 50px 20%;
-        line-height: 1.6em;
+}
+@media only screen and (min-width: 1280px) {
+    .about, .offer, .prices, .portfolio, .contact, footer {
+        padding: 50px 200px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    .about, .offer, .prices, .portfolio, .contact, footer {
+        padding: 50px 250px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .about, .offer, .prices, .portfolio, .contact, footer {
+        padding: 50px 300px;
+    }
+}
+@media only screen and (min-width: 1900px) {
+    .about, .offer, .prices, .portfolio, .contact, footer {
+        padding: 70px 400px;
     }
 }

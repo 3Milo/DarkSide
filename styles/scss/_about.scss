@@ -9,17 +9,17 @@
 	}
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
 	.about {
-		vertical-align: text-top;
-		div {
-			display: inline-block;
-			width: 300px;
-			vertical-align: text-top;
-			&:nth-child(1) {
-				width: calc(100% - 346px);
-				margin-right: 40px;
-			}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.text {
+			flex: 1;
+			margin-right: 50px;
+		}
+		.img {
+			width: 350px;
 		}
 	}
 }
