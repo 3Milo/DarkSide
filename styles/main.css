@@ -130,7 +130,7 @@ footer {
   top: 0;
   left: 0;
   width: 0;
-  height: 100vh;
+  min-height: -webkit-fill-available;
   background: #0B3954;
   overflow: hidden;
   transition: width 0.4s ease; }
