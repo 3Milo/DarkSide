@@ -1,12 +1,13 @@
-.about div p {
-  margin: 20px 0; }
-
-.about div img {
-  width: 100%; }
+.about {
+  display: flex;
+  flex-direction: column; }
+  .about div p {
+    margin: 20px 0; }
+  .about div img {
+    width: 100%; }
 
 @media only screen and (min-width: 800px) {
   .about {
-    display: flex;
     flex-direction: row;
     justify-content: space-between; }
     .about .text {
