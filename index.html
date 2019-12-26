@@ -8,12 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
         <!-- <link rel="icon" href="./images/ikona.png" type="image/x-icon"> -->
 		<link rel="stylesheet" href="styles/main.css">
-		<!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif&display=swap" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script async defer src="scripts/main.js"></script>
     </head>
     <body>
+        <div class="arrow">
+            <img src="images/arrow.svg" alt='top'>
+        </div>
         <div class='burger'>
             <span></span>
             <span></span>
@@ -29,16 +31,18 @@
                 <div>KONTAKT</div>
             </div>
         </div>
-        <div class="navbar">
-            <div class="name">
-                Ciemna Strona Księżyca
-            </div>
-            <div class="options">
-                <div>O MNIE</div>
-                <div>OFERTA</div>
-                <div>PORTFOLIO</div>
-                <div>CENNIK</div>
-                <div>KONTAKT</div>
+        <div class="navbar show">
+            <div class="flexbox">
+                <div class="name">
+                    Ciemna Strona Księżyca
+                </div>
+                <div class="options">
+                    <div>O MNIE</div>
+                    <div>OFERTA</div>
+                    <div>PORTFOLIO</div>
+                    <div>CENNIK</div>
+                    <div>KONTAKT</div>
+                </div>
             </div>
         </div>
         <div class="about">
@@ -117,7 +121,7 @@
             <h1>Cennik</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt.</p>
-            <table style="width:100%">
+            <table>
                 <tr>
                     <th>Usługa</th>
                     <th>Cena netto</th>

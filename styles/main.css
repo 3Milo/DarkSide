@@ -45,6 +45,8 @@
             width: 40px;
             height: 40px;
             margin-right: 15px; }
+        .offer .tilesContainer .firstRow .tile div p, .offer .tilesContainer .secondRow .tile div p {
+          margin-top: 10px; }
 
 @media only screen and (min-width: 800px) {
   .offer .tilesContainer .firstRow, .offer .tilesContainer .secondRow {
@@ -73,7 +75,8 @@
     border-collapse: collapse; }
   .prices table {
     margin-top: 30px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    width: 100%; }
   .prices p {
     margin-top: 40px; }
     .prices p:first-of-type {
@@ -134,7 +137,8 @@ footer {
   min-height: -webkit-fill-available;
   background: #0B3954;
   overflow: hidden;
-  transition: width 0.4s ease; }
+  transition: width 0.4s ease;
+  z-index: 10000; }
   .menu .flexbox {
     display: flex;
     flex-direction: column;
@@ -221,45 +225,89 @@ footer {
     display: none; } }
 
 .navbar {
-  display: none; }
+  display: block;
+  position: fixed;
+  height: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+  background: white; }
 
 @media only screen and (min-width: 1000px) {
-  .navbar {
+  .navbar .flexbox {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 20px;
-    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
-    letter-spacing: 1px; }
-    .navbar .name {
+    height: 100px;
+    letter-spacing: 1px;
+    transition: height 0.4s ease; }
+    .navbar .flexbox .name {
       font-size: 1.6em;
-      width: 329px;
-      border-bottom: 2px solid white; }
-    .navbar .options {
+      width: 329px; }
+    .navbar .flexbox .options {
       display: flex;
       flex-direction: row;
       justify-content: flex-end; }
-      .navbar .options div {
+      .navbar .flexbox .options div {
         cursor: pointer;
-        border-bottom: 2px solid white;
         margin-right: 20px; }
-        .navbar .options div:nth-child(5) {
+        .navbar .flexbox .options div:nth-child(5) {
           margin-right: 0; }
-        .navbar .options div:hover {
-          border-bottom: 2px solid #b9d432; } }
+        .navbar .flexbox .options div:after {
+          content: '';
+          display: block;
+          margin: auto;
+          height: 2px;
+          width: 0px;
+          background: #b9d432;
+          transition: width .4s ease; }
+        .navbar .flexbox .options div:hover:after {
+          width: 100%;
+          background: #b9d432; }
+  .navbar.show {
+    height: 100px; } }
 
 @media only screen and (min-width: 1280px) {
   .navbar {
-    padding: 30px 60px; }
-    .navbar .options div {
+    padding-left: 60px;
+    padding-right: 60px; }
+    .navbar .flexbox .options div {
       margin-right: 40px; } }
 
 @media only screen and (min-width: 1600px) {
   .navbar {
-    padding: 30px 100px; }
-    .navbar .options div {
+    padding-left: 100px;
+    padding-right: 100px; }
+    .navbar .flexbox .options div {
       margin-right: 45px; } }
+
+.arrow {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 15px;
+  cursor: pointer;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 50%; }
+  .arrow img {
+    width: 30px;
+    height: 30px; }
+  .arrow.show {
+    display: block; }
+
+@media only screen and (min-width: 1000px) {
+  .arrow {
+    right: 50px;
+    bottom: 50px; }
+    .arrow img {
+      width: 50px;
+      height: 50px; } }
 
 * {
   margin: 0;
@@ -288,21 +336,31 @@ p {
   letter-spacing: 1px; }
 
 @media only screen and (min-width: 900px) {
-  .about, .offer, .prices, .portfolio, .contact, footer {
-    padding: 50px; } }
+  .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px; }
+  .about {
+    padding: 150px 50px 50px 50px; } }
 
 @media only screen and (min-width: 1280px) {
-  .about, .offer, .prices, .portfolio, .contact, footer {
-    padding: 50px 200px; } }
+  .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px 200px; }
+  .about {
+    padding: 150px 200px 50px 200px; } }
 
 @media only screen and (min-width: 1500px) {
-  .about, .offer, .prices, .portfolio, .contact, footer {
-    padding: 50px 250px; } }
+  .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px 250px; }
+  .about {
+    padding: 150px 250px 50px 250px; } }
 
 @media only screen and (min-width: 1600px) {
-  .about, .offer, .prices, .portfolio, .contact, footer {
-    padding: 50px 300px; } }
+  .offer, .prices, .portfolio, .contact, footer {
+    padding: 50px 300px; }
+  .about {
+    padding: 150px 300px 50px 300px; } }
 
 @media only screen and (min-width: 1900px) {
-  .about, .offer, .prices, .portfolio, .contact, footer {
-    padding: 70px 400px; } }
+  .offer, .prices, .portfolio, .contact, footer {
+    padding: 70px 400px; }
+  .about {
+    padding: 150px 400px 50px 400px; } }

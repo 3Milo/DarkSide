@@ -1,57 +1,84 @@
 .navbar {
-	display: none;
+	display: block;
+	position: fixed;
+	height: 0;
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	transition: height 0.4s ease;
+	box-shadow: 0 3px 16px rgba(0,0,0,.1);
+	background: white;
 }
 
 @media only screen and (min-width: 1000px) {
     .navbar {
-    	display: flex;
-    	flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 30px 20px;
-		box-shadow: 0 3px 16px rgba(0,0,0,.1);
-		letter-spacing: 1px;
-		.name {
-			font-size: 1.6em;
-			width: 329px;
-			border-bottom: 2px solid white;
-		}
-		.options {
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-end;
-			div {
-				cursor: pointer;
-				border-bottom: 2px solid white;
-				margin-right: 20px;
-				&:nth-child(5) {
-					margin-right: 0;
-				}
-				&:hover {
-					border-bottom: 2px solid $green;
+    	.flexbox {
+    		display: flex;
+	    	flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			height: 100px;
+			letter-spacing: 1px;
+			transition: height 0.4s ease;
+			.name {
+				font-size: 1.6em;
+				width: 329px;
+			}
+			.options {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				div {
+					cursor: pointer;
+					margin-right: 20px;
+					&:nth-child(5) {
+						margin-right: 0;
+					}
+					&:after {
+						content: '';
+						display: block;
+						margin: auto;
+						height: 2px;
+						width: 0px;
+						background: $green;
+						transition: width .4s ease;
+					}
+					&:hover:after {
+						width: 100%;
+						background: $green;
+					}
 				}
 			}
+    	}
+    	&.show {
+			height: 100px;
 		}
 	}
 }
 
 @media only screen and (min-width: 1280px) {
     .navbar {
-        padding: 30px 60px;
-        .options {
-			div {
-				margin-right: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+        .flexbox {
+        	.options {
+				div {
+					margin-right: 40px;
+				}
 			}
-		}
+        }
     }
 }
 @media only screen and (min-width: 1600px) {
     .navbar {
-        padding: 30px 100px;
-        .options {
-			div {
-				margin-right: 45px;
+        padding-left: 100px;
+        padding-right: 100px;
+        .flexbox {
+        	.options {
+				div {
+					margin-right: 45px;
+				}
 			}
-		}
+        }
     }
 }

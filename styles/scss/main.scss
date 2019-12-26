@@ -10,6 +10,7 @@
 @import 'menu';
 @import 'burger';
 @import 'navbar';
+@import 'arrow';
 
 * {
     margin: 0;
@@ -43,27 +44,42 @@ p {
 }
 
 @media only screen and (min-width: 900px) {
-    .about, .offer, .prices, .portfolio, .contact, footer {
+    .offer, .prices, .portfolio, .contact, footer {
         padding: 50px;
+    }
+    .about {
+        padding: 150px 50px 50px 50px;
     }
 }
 @media only screen and (min-width: 1280px) {
-    .about, .offer, .prices, .portfolio, .contact, footer {
+    .offer, .prices, .portfolio, .contact, footer {
         padding: 50px 200px;
+    }
+    .about {
+        padding: 150px 200px 50px 200px;
     }
 }
 @media only screen and (min-width: 1500px) {
-    .about, .offer, .prices, .portfolio, .contact, footer {
+    .offer, .prices, .portfolio, .contact, footer {
         padding: 50px 250px;
+    }
+    .about {
+        padding: 150px 250px 50px 250px;
     }
 }
 @media only screen and (min-width: 1600px) {
-    .about, .offer, .prices, .portfolio, .contact, footer {
+    .offer, .prices, .portfolio, .contact, footer {
         padding: 50px 300px;
+    }
+    .about {
+        padding: 150px 300px 50px 300px;
     }
 }
 @media only screen and (min-width: 1900px) {
-    .about, .offer, .prices, .portfolio, .contact, footer {
+    .offer, .prices, .portfolio, .contact, footer {
         padding: 70px 400px;
+    }
+    .about {
+        padding: 150px 400px 50px 400px;
     }
 }
