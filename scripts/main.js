@@ -1,15 +1,6 @@
-$('.burger').click(() => {
+const viewHeight = document.documentElement.clientHeight;
 
-	$('.burger').css("pointer-events", "none");
-
-	setTimeout(() => $('.burger').css("pointer-events", "auto"), 400);
-
-	let height = document.documentElement.clientHeight;
-
-	$('.menu').css('height', height);
-	$('.menu .flexbox').css('height', height * 0.8);
-	$('.menu .flexbox').css('margin', height * 0.1);
-
+const switchMenu = () => {
 	$('.burger').toggleClass('open');
 	$('.menu').toggleClass('open');
 
@@ -21,49 +12,48 @@ $('.burger').click(() => {
 		$('.about, .offer').css('display', 'flex');
 		$('.portfolio, .prices, .contact, footer').css('display', 'block');
 	}
+};
+
+const chooseSection = (text) => {
+	if (text == 'O MNIE') return $('.about');
+	if (text == 'OFERTA') return $('.offer');
+	if (text == 'PORTFOLIO') return $('.portfolio');
+	if (text == 'CENNIK') return $('.prices');
+
+	return $('.contact');
+};
+
+$('.burger').click(() => {
+
+	$('.burger').css("pointer-events", "none");
+
+	$('.menu').css('height', viewHeight);
+	$('.menu .flexbox').css('height', viewHeight * 0.8);
+	$('.menu .flexbox').css('margin', viewHeight * 0.1);
+
+	switchMenu();
+
+	setTimeout(() => $('.burger').css("pointer-events", "auto"), 400);
 });
 
 $('.menu .flexbox div').click(el => {
 	let text = el.target.textContent,
-		scroll;
+		scroll = chooseSection(text);
 
-	if (text == 'O MNIE') {
-		scroll = $('.about');
-	} else if (text == 'OFERTA') {
-		scroll = $('.offer');
-	} else if (text == 'PORTFOLIO') {
-		scroll = $('.portfolio');
-	} else if (text == 'CENNIK') {
-		scroll = $('.prices');
-	} else {
-		scroll = $('.contact');
-	}
+	switchMenu();
 
-	$('.burger').removeClass('open');
-	$('.menu').removeClass('open');
+	$(window).scrollTop(scroll.offset().top);
 });
 
 $('.options div').click(el => {
 	let text = el.target.textContent,
-		scroll;
+		scroll = chooseSection(text);
 
-	if (text == 'O MNIE') {
-		scroll = $('.about');
-	} else if (text == 'OFERTA') {
-		scroll = $('.offer');
-	} else if (text == 'PORTFOLIO') {
-		scroll = $('.portfolio');
-	} else if (text == 'CENNIK') {
-		scroll = $('.prices');
-	} else {
-		scroll = $('.contact');
-	}
-
-	$("html, body").animate({ scrollTop: scroll.offset().top }, 100);
+	$(window).scrollTop(scroll.offset().top);
 });
 
 $('.arrow').click(el => {
-	$("html, body").animate({ scrollTop: 0 }, 100);
+	$(window).scrollTop(0);
 });
 
 $(window).on('scroll', () => {
