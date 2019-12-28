@@ -4,8 +4,6 @@
 	top: 0;
 	left: 0;
 	width: 0;
-	// height: 100vh;
-	min-height: -webkit-fill-available;
 	background: $darkblue;
 	overflow: hidden;
 	transition: width 0.4s ease;
@@ -15,8 +13,6 @@
 		flex-direction: column;
 		vertical-align: center;
 		justify-content: space-between;
-		margin: 10vh;
-		height: 80vh;
 		div {
 			padding: 16px 0;
 			width: calc(100vw - 20vh);
