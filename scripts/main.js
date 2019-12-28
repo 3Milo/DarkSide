@@ -1,5 +1,3 @@
-const viewHeight = document.documentElement.clientHeight;
-
 const switchMenu = () => {
 	$('.burger').toggleClass('open');
 	$('.menu').toggleClass('open');
@@ -24,7 +22,7 @@ const chooseSection = (text) => {
 };
 
 $('.burger').click(() => {
-
+	let viewHeight = document.documentElement.clientHeight;
 	$('.burger').css("pointer-events", "none");
 
 	$('.menu').css('height', viewHeight);
@@ -33,7 +31,7 @@ $('.burger').click(() => {
 
 	switchMenu();
 
-	setTimeout(() => $('.burger').css("pointer-events", "auto"), 400);
+	setTimeout(() => $('.burger').css("pointer-events", "auto"), 450);
 });
 
 $('.menu .flexbox div').click(el => {
