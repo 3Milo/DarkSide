@@ -114,11 +114,14 @@
 
 @media only screen and (min-width: 600px) {
   .portfolio .carousel div {
-    margin: 20px;
     width: 160px;
     height: 160px; }
     .portfolio .carousel div:hover {
       box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); } }
+
+@media only screen and (min-width: 900px) {
+  .portfolio .carousel div {
+    margin: 20px; } }
 
 .contact .phone, .contact .mail {
   vertical-align: middle;
