@@ -1,4 +1,9 @@
 $('.burger').click(() => {
+
+	$('.burger').css("pointer-events", "none");
+
+	setTimeout(() => $('.burger').css("pointer-events", "auto"), 400);
+
 	let height = document.documentElement.clientHeight;
 
 	$('.menu').css('height', height);
@@ -8,17 +13,14 @@ $('.burger').click(() => {
 	$('.burger').toggleClass('open');
 	$('.menu').toggleClass('open');
 
-	$("html, body").css('overflow', $('.menu').hasClass('open') ? 'hidden' : '');
-	$("html, body").css('position', $('.menu').hasClass('open') ? 'relative' : '');
-
-	// if ($('.menu').hasClass('open')) {
-	// 	setTimeout(() => {
-	// 		$('.about, .offer, .portfolio, .prices, .contact, footer').css('display', 'none');
-	// 	}, 400);
-	// } else {
-	// 	$('.about, .offer').css('display', 'flex');
-	// 	$('.portfolio, .prices, .contact, footer').css('display', 'block');
-	// }
+	if ($('.menu').hasClass('open')) {
+		setTimeout(() => {
+			$('.about, .offer, .portfolio, .prices, .contact, footer').css('display', 'none');
+		}, 400);
+	} else {
+		$('.about, .offer').css('display', 'flex');
+		$('.portfolio, .prices, .contact, footer').css('display', 'block');
+	}
 });
 
 $('.menu .flexbox div').click(el => {
@@ -39,9 +41,6 @@ $('.menu .flexbox div').click(el => {
 
 	$('.burger').removeClass('open');
 	$('.menu').removeClass('open');
-
-	$("html, body").css('overflow', '');
-	$("html, body").css('position', '');
 });
 
 $('.options div').click(el => {
