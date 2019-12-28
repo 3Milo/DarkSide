@@ -9,6 +9,7 @@ $('.burger').click(() => {
 	$('.menu').toggleClass('open');
 
 	$("html, body").css('overflow', $('.menu').hasClass('open') ? 'hidden' : '');
+	$("html, body").css('position', $('.menu').hasClass('open') ? 'relative' : '');
 
 	// if ($('.menu').hasClass('open')) {
 	// 	setTimeout(() => {
@@ -40,6 +41,7 @@ $('.menu .flexbox div').click(el => {
 	$('.menu').removeClass('open');
 
 	$("html, body").css('overflow', '');
+	$("html, body").css('position', '');
 });
 
 $('.options div').click(el => {
