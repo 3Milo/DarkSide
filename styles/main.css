@@ -93,6 +93,33 @@
       padding: 20px 20px;
       letter-spacing: 1px; }
 
+.portfolio .carousel {
+  text-align: center;
+  margin-top: 20px; }
+  .portfolio .carousel div {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    width: 35vw;
+    height: 35vw;
+    transition: box-shadow 0.4s linear; }
+    .portfolio .carousel div a img {
+      width: 100%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+
+@media only screen and (min-width: 600px) {
+  .portfolio .carousel div {
+    margin: 20px;
+    width: 160px;
+    height: 160px; }
+    .portfolio .carousel div:hover {
+      box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1); } }
+
 .contact .phone, .contact .mail {
   vertical-align: middle;
   margin: 20px 0; }
@@ -332,7 +359,8 @@ h1 {
 
 p {
   line-height: 26px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  line-height: 2em; }
 
 @media only screen and (min-width: 900px) {
   .offer, .prices, .portfolio, .contact, footer {
