@@ -8,8 +8,8 @@ $('.burger').click(() => {
 	$('.burger').toggleClass('open');
 	$('.menu').toggleClass('open');
 
-	$("html, body").css('overflow', $('.menu').hasClass('open') ? 'hidden' : '');
-	$("html, body").css('position', $('.menu').hasClass('open') ? 'relative' : '');
+	// $("html, body").css('overflow', $('.menu').hasClass('open') ? 'hidden' : '');
+	// $("html, body").css('position', $('.menu').hasClass('open') ? 'relative' : '');
 
 	// if ($('.menu').hasClass('open')) {
 	// 	setTimeout(() => {
@@ -40,8 +40,8 @@ $('.menu .flexbox div').click(el => {
 	$('.burger').removeClass('open');
 	$('.menu').removeClass('open');
 
-	$("html, body").css('overflow', '');
-	$("html, body").css('position', '');
+	// $("html, body").css('overflow', '');
+	// $("html, body").css('position', '');
 });
 
 $('.options div').click(el => {
@@ -68,11 +68,21 @@ $('.arrow').click(el => {
 });
 
 $(window).on('scroll', () => {
-	if ($(this).scrollTop() < 40) {
-		$('.navbar').addClass('show');
-		$('.arrow').removeClass('show');
+	if ($('body').width() < 1000) {
+		if ($(this).scrollTop() < 40) {
+			$('.arrow').removeClass('show');
+		} else {
+			if (!$('.menu').hasClass('open')) {
+				$('.arrow').addClass('show');
+			}
+		}
 	} else {
-		$('.navbar').removeClass('show');
-		$('.arrow').addClass('show');
+		if ($(this).scrollTop() < 40) {
+			$('.navbar').addClass('show');
+			$('.arrow').removeClass('show');
+		} else {
+			$('.navbar').removeClass('show');
+			$('.arrow').addClass('show');
+		}
 	}
 });
